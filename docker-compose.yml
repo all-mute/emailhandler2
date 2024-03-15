@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  fastapi-app:
+    build: .
+    ports:
+      - "5005:5005"
+    volumes:
+      - .:/app
+      - ./data:/app/data # Предполагается, что вы сохраняете файлы в поддиректорию data

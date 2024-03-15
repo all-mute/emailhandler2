@@ -7,7 +7,7 @@ app = FastAPI()
 class Item(BaseModel):
     text: str
 
-@app.post("/save-text/")
+@app.post("/save-text")
 async def save_text(item: Item):
     try:
         with open("saved_texts.txt", "a") as file:
